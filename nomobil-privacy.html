@@ -3,20 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nomobil 隐私政策</title>
+<title>Nomobil 隐私政策 / Privacy Policy</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.7; color: #1a1a1a; }
   h1 { font-size: 26px; margin-bottom: 4px; }
-  .updated { color: #888; font-size: 14px; margin-bottom: 32px; }
+  .updated { color: #888; font-size: 14px; margin-bottom: 24px; }
   h2 { font-size: 19px; margin-top: 36px; border-bottom: 1px solid #eee; padding-bottom: 8px; }
   table { width: 100%; border-collapse: collapse; margin: 16px 0; }
   th, td { text-align: left; padding: 8px 10px; border: 1px solid #e0e0e0; font-size: 14px; vertical-align: top; }
   th { background: #f7f7f7; }
   code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
   .contact { background: #f7f7f7; padding: 16px 20px; border-radius: 8px; margin-top: 12px; }
+  .lang-switch { margin-bottom: 28px; font-size: 14px; }
+  .lang-switch a { margin-right: 12px; text-decoration: none; color: #0366d6; }
+  .divider { border: none; border-top: 3px double #ccc; margin: 64px 0 40px; }
+  #en { display: none; }
+  #en.active { display: block; }
+  #zh.hidden { display: none; }
 </style>
 </head>
 <body>
+
+<div class="lang-switch">
+  <a href="#" onclick="showLang('zh');return false;">中文</a>
+  <a href="#" onclick="showLang('en');return false;">English</a>
+</div>
+
+<div id="zh">
 
 <h1>Nomobil 隐私政策</h1>
 <p class="updated">最后更新：2026年9月</p>
@@ -67,6 +80,69 @@
 如对本隐私政策有任何疑问，请通过以下方式联系我们：<br>
 邮箱：<code>nomobil.my@gmail.com</code>
 </div>
+
+</div>
+
+<div id="en">
+
+<h1>Nomobil Privacy Policy</h1>
+<p class="updated">Last updated: September 2026</p>
+
+<p>Nomobil ("the App") helps small business owners and freelancers capture and organize expense receipts. This policy explains how we handle your data.</p>
+
+<h2>1. What We Collect</h2>
+<table>
+<tr><th>Data Type</th><th>Description</th></tr>
+<tr><td>Receipt photos</td><td>Photos of receipts and invoices you capture or upload</td></tr>
+<tr><td>Financial information</td><td>Merchant name, amount, date, category, payment method — either extracted from receipts or entered manually</td></tr>
+<tr><td>Your own API key</td><td>Used to connect to a third-party AI recognition service, stored in your device's system-level secure storage (Keychain)</td></tr>
+</table>
+
+<h2>2. Where Data Is Stored</h2>
+<p>Nomobil <strong>does not operate any server</strong>. Your receipt data is never uploaded to Nomobil or to any server controlled by its developer. All records and original images are stored only on your iPhone's local storage.</p>
+
+<h2>3. Who Data Is Shared With</h2>
+<p>Nomobil uses a "Bring Your Own Key" (BYOK) model: the AI recognition feature requires you to enter your own API key for a third-party AI provider (such as Anthropic Claude, Google Gemini, or another compatible service you configure). When you use the photo recognition feature:</p>
+<ul>
+<li>The receipt photo and recognition request are sent <strong>directly from your device to the third-party AI provider you chose and pay for</strong>, in order to recognize the content;</li>
+<li>The Nomobil developer never receives, views, or stores any content from that transmission;</li>
+<li>How that third-party provider handles this data is governed by its own privacy policy — please review the privacy policy of whichever provider you choose before use.</li>
+</ul>
+
+<h2>4. How Your API Key Is Stored</h2>
+<p>The API key you enter is stored in the iOS system-level Keychain. It is not written in plain text to ordinary app storage, and it is never uploaded to any server. Deleting the App or clearing it in Settings removes the key from your device.</p>
+
+<h2>5. What We Don't Do</h2>
+<ul>
+<li>No user account system, no registration required</li>
+<li>No cloud sync or cross-device backup</li>
+<li>No tracking of your activity across other apps or websites</li>
+<li>We never sell or share any data with advertisers or data brokers</li>
+</ul>
+
+<h2>6. Data Deletion</h2>
+<p>Deleted records first go to the Recycle Bin, then are permanently and physically deleted from the device — along with the original images — after 7 days, or you may empty the Recycle Bin manually at any time. Uninstalling the App removes all data stored on the device.</p>
+
+<h2>7. Children's Privacy</h2>
+<p>This App is designed for business owners managing day-to-day bookkeeping. It is not directed at children, and we do not knowingly collect personal information from children.</p>
+
+<h2>8. Policy Updates</h2>
+<p>If this policy changes materially, we will update the "Last updated" date at the top of this page.</p>
+
+<h2>9. Contact Us</h2>
+<div class="contact">
+If you have any questions about this privacy policy, please contact us at:<br>
+Email: <code>nomobil.my@gmail.com</code>
+</div>
+
+</div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('zh').classList.toggle('hidden', lang !== 'zh');
+  document.getElementById('en').classList.toggle('active', lang === 'en');
+}
+</script>
 
 </body>
 </html>
